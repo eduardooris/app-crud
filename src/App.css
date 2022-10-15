@@ -1,38 +1,82 @@
 .App {
-  text-align: center;
+  padding: 15%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.formulario label {
+    font-size: 20px;
+}
+
+.formulario input {
+    width: 250px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    padding: 5px;
+    margin: 10px 0px;
+}
+
+.formulario button {
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #00ff88;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.formulario button:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+hr {
+    width: 100%;
+    margin: 15px;
+}
+
+.usuarios {
+    margin-top: 50px;
+}
+
+
+.label {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.user {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid white;
+  padding: 15px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span svg {
+    cursor: pointer;
 }
