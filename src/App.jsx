@@ -1,7 +1,8 @@
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsTrash, BsFillPeopleFill } from 'react-icons/bs'
 import './App.css';
+import Loading from './Loading';
 
 const API = "http://localhost:5000"
 
@@ -74,6 +75,7 @@ function App() {
 
   } */
 
+
   return (
     <div className="App">
       <h1>Usuários <BsFillPeopleFill /></h1>
@@ -106,13 +108,13 @@ function App() {
           <span>Editar</span>
         </div>
         <hr />
-      {users.map((user) => (
+      {loading === true ? (<Loading type='spokes' color='white' height={100} width={59} />) : (users.map((user) => (
         <div className="user" key={user.id}>
             <span>{user.name}</span>
             <span>{user.email}</span>
             <span><BsTrash onClick={() => handleDelete(user.id)} /></span>
         </div>
-      ))}
+      )))}
       </div>
     </div>
   );
