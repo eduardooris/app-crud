@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { BsTrash, BsFillPeopleFill } from 'react-icons/bs'
-import './App.css';
-import Loading from './Loading';
+import './index.css';
+import Loading from '../../components/Loading';
 
 const API = "http://localhost:5000"
 
@@ -63,6 +63,16 @@ function App() {
 
     setUsers((prevState) => prevState.filter((user) => user.id !== id))
   }
+  /*const handleEdit = async (user) => {
+    const data = await fetch(API + '/users/' + user.id, {
+      method: "PUT",
+      body: JSON.stringify(user),
+      headers: {
+        "content-type" : "application/json"
+      }
+    })
+
+  } */
 
 
   return (
