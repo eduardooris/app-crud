@@ -64,17 +64,6 @@ function App() {
     setUsers((prevState) => prevState.filter((user) => user.id !== id))
   }
 
-  /*const handleEdit = async (user) => {
-    const data = await fetch(API + '/users/' + user.id, {
-      method: "PUT",
-      body: JSON.stringify(user),
-      headers: {
-        "content-type" : "application/json"
-      }
-    })
-
-  } */
-
 
   return (
     <div className="App">
